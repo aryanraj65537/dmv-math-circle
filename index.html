@@ -35,10 +35,11 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="data.js"></script>
 </head>
 
 <body class="index-page">
-
+  <script src="data.js"></script>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -93,32 +94,46 @@
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="3" class="purecounter">9</span>
+                  <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="3" class="purecounter" id="num1">9</span>
                   <p>Counties</p>
                 </div>
               </div><!-- End Stats Item -->
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="3" class="purecounter">20</span>
+                  <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="3" class="purecounter" id="num2">20</span>
                   <p>Schools</p>
                 </div>
               </div><!-- End Stats Item -->
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="3" class="purecounter">300+</span>
+                  <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="3" class="purecounter" id="num3">300+</span>
                   <p>Members</p>
                 </div>
               </div><!-- End Stats Item -->
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="3" class="purecounter">15</span>
+                  <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="3" class="purecounter" id="num4">15</span>
                   <p>Workers</p>
                 </div>
               </div><!-- End Stats Item -->
-
+              
+              <script>
+                // Apply the data from the separate JS file to the HTML elements
+                document.getElementById('num1').setAttribute('data-purecounter-end', statsData.counties);
+                document.getElementById('num1').textContent = statsData.counties;
+              
+                document.getElementById('num2').setAttribute('data-purecounter-end', statsData.schools);
+                document.getElementById('num2').textContent = statsData.schools;
+              
+                document.getElementById('num3').setAttribute('data-purecounter-end', statsData.members);
+                document.getElementById('num3').textContent = statsData.members;
+              
+                document.getElementById('num4').setAttribute('data-purecounter-end', statsData.workers);
+                document.getElementById('num4').textContent = statsData.workers;
+              </script>
             </div>
 
           </div>
