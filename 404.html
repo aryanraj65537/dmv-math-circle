@@ -38,7 +38,7 @@
 </head>
 
 <body class="starter-page-page">
-
+  <script src="data.js"></script>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -95,21 +95,26 @@
     </div><!-- End Page Title -->
 
     <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>404 page<br></span>
-        <h2>404 page</h2>
-        <p>if i messed anything up on this site please message me on <a href="https://discord.com/users/824104716224036887">discord</a></p>
+    <section>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+          <p>If I messed anything up on this site, please message me on <a href="https://discord.com/users/824104716224036887">Discord</a></p>
+          <p>Here is a random DMV Math Circle worker lol</p>
+          <img id="randomImage" src="" width="200px">
       </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>here is a prize for reaching this page!</p>
-        <img src="assets/img/team/sohamkyada.png">
-      </div>
-
-    </section><!-- /Starter Section Section -->
+  
+      <script>
+          // Array of image file names
+  
+          // Function to randomly pick an image file from the directory
+          function getRandomImage() {
+              const randomIndex = Math.floor(Math.random() * imageFiles.length);
+              return 'assets/img/team/' + imageFiles[randomIndex];
+          }
+  
+          // Set the src attribute of the img tag to a random image
+          document.getElementById('randomImage').src = getRandomImage();
+      </script>
+  </section><!-- /Starter Section Section -->
 
   </main>
 
