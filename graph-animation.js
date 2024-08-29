@@ -6,7 +6,7 @@ class Graph {
         this.idealNumNodes = 69; // Increase the number of nodes for more frequent appearance
         this.extraEdgeProportion = 1; // Increase edge density
         this.radiiWeightPower = 0;
-        this.driftSpeed = 0.05; // Increase speed significantly
+        this.driftSpeed = 0.025; // Increase speed significantly
         this.repulsionForce = 0;
         this.fadeInPerFrame = 0.1; // Increase fade-in speed for quicker appearance
         this.fadeOutPerFrame = -0.05; // Increase fade-out speed for quicker disappearance
