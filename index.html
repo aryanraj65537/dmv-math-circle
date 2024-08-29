@@ -33,7 +33,6 @@
 
 <body class="index-page">
   <script src="data.js"></script>
-  <script src="graph-animation.js"></script>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -129,6 +128,20 @@
                   <p>Workers</p>
                 </div>
               </div><!-- End Stats Item -->
+              <script>
+                // Apply the data from the separate JS file to the HTML elements
+                document.getElementById('num1').setAttribute('data-purecounter-end', statsData.counties);
+                document.getElementById('num1').textContent = statsData.counties;
+              
+                document.getElementById('num2').setAttribute('data-purecounter-end', statsData.schools);
+                document.getElementById('num2').textContent = statsData.schools;
+              
+                document.getElementById('num3').setAttribute('data-purecounter-end', statsData.members);
+                document.getElementById('num3').textContent = statsData.members;
+              
+                document.getElementById('num4').setAttribute('data-purecounter-end', statsData.workers);
+                document.getElementById('num4').textContent = statsData.workers;
+              </script>
             </div>
           </div>
         </div>
