@@ -33,6 +33,7 @@
 
 <body class="index-page">
   <script src="data.js"></script>
+  <script src="graph-animation.js"></script>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -75,16 +76,32 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
+      <!-- SVG background -->
+      <style>
+      .hero-bg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      </style>
+      <svg id="graph-bg" class="hero-bg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#575E85;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2E3145;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grad1)" />
+        <g></g>
+      </svg>
 
-      <div class="container">
-        <div class="row gy-4 d-flex justify-content-between">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="row gy-4 d-flex justify-content-center">
+          <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center text-center">
             <h2 data-aos="fade-up">The DC Area's best math circle.</h2>
             <p data-aos="fade-up" data-aos-delay="100">DMV Math Circle is an initiative aimed at engaging students with challenging math problems, encouraging critical thinking, and building a strong mathematical foundation. We offer a variety of programs, competitions, and tutoring sessions to help students excel in mathematics.</p>
 
-            <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
-
+            <div class="row gy-4 justify-content-center" data-aos="fade-up" data-aos-delay="300">
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
                   <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="3" class="purecounter" id="num1">9</span>
@@ -112,29 +129,8 @@
                   <p>Workers</p>
                 </div>
               </div><!-- End Stats Item -->
-              
-              <script>
-                // Apply the data from the separate JS file to the HTML elements
-                document.getElementById('num1').setAttribute('data-purecounter-end', statsData.counties);
-                document.getElementById('num1').textContent = statsData.counties;
-              
-                document.getElementById('num2').setAttribute('data-purecounter-end', statsData.schools);
-                document.getElementById('num2').textContent = statsData.schools;
-              
-                document.getElementById('num3').setAttribute('data-purecounter-end', statsData.members);
-                document.getElementById('num3').textContent = statsData.members;
-              
-                document.getElementById('num4').setAttribute('data-purecounter-end', statsData.workers);
-                document.getElementById('num4').textContent = statsData.workers;
-              </script>
             </div>
-
           </div>
-
-          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="assets/img/hero-img.jpg" class="img-fluid mb-3 mb-lg-0" alt="">
-          </div>
-
         </div>
       </div>
 
