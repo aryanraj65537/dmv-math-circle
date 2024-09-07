@@ -12,5 +12,6 @@ const imageFiles = [
     'mohanparathasy.png',
     'roselynchen.png',
     'thanhcan.png',
-    'tonyzhang.png'
+    'tonyzhang.png',
+    'gabezhang.png'
   ];  
