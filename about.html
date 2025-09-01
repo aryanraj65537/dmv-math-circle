@@ -179,29 +179,46 @@
 
     </section><!-- /Stats Section -->
 <style>
+  /* Make each card fill the column and keep images full-width */
+  .team .member {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .team .member img {
-    width: 69420px;
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .team .member .member-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 8px;
+    flex: 1 1 auto;
+  }
+  .team .member .member-content h4 {
+    margin: 0;
+    font-weight: 600;
+  }
+  .team .member .member-content span {
+    display: block;
+    font-size: 13px;
+    font-style: italic;
+    color: #212529;
   }
   .social a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px; /* Adjusts spacing between icons */
+    margin-right: 10px;
     text-decoration: none;
   }
-
-  .social i {
-      font-size: 24px;
-  }
-
-  .custom-icon {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle; /* Aligns the image vertically with the text */
-  }
+  .social i { font-size: 24px; }
+  .custom-icon { width: 24px; height: 24px; vertical-align: middle; }
 </style>
-<!-- Team Section -->
+
 <section id="team" class="team section">
 
   <!-- Section Title -->
@@ -209,21 +226,18 @@
     <span>Our Team</span>
     <h2>Our Team</h2>
     <p>Meet the dedicated individuals behind DMV Math Circle who are passionate about making a difference in students' lives.</p>
-  </div><!-- End Section Title -->
+  </div>
 
+  <!-- Founders (static, above the 3-col grid) -->
   <div class="container">
-
     <div class="row justify-content-center">
-
       <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
         <div class="member">
           <img src="assets/img/team/adithyaprabha.png" class="img-fluid" alt="">
           <div class="member-content">
             <h4>Adithya Prabha</h4>
             <span>CEO, Cofounder</span>
-            <p>
-              Adithya is passionate about math and loves sharing that passion with others. When not doing math, Adithya enjoys playing tennis and is always eager to help others learn and grow in their mathematical journey.
-            </p>
+            <p>Adithya is passionate about math and loves sharing that passion with others. When not doing math, Adithya enjoys playing tennis and is always eager to help others learn and grow in their mathematical journey.</p>
             <div class="social">
               <a href="https://discord.com/users/760205699313303553"><i class="bi bi-discord"></i></a>
               <a href="https://www.linkedin.com/in/adithya-prabha-4aaa06292/"><i class="bi bi-linkedin"></i></a>
@@ -231,7 +245,7 @@
             </div>
           </div>
         </div>
-      </div><!-- End Team Member -->
+      </div><!-- End Founder -->
 
       <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
         <div class="member">
@@ -239,9 +253,7 @@
           <div class="member-content">
             <h4>Aryan Raj</h4>
             <span>CTO, Cofounder</span>
-            <p>
-              Aryan is a junior at Chantilly High School in Chantilly, Virginia. He is a two-time USAJMO qualifier and recieved a USAJMO Honorable Mention. Aryan cofounded DMV Math Circle to spread the joy of math to others in his community. Outside of math, Aryan enjoys coding (including making this website!) and biking around his neighborhood.
-            </p>
+            <p>Aryan is a junior at Chantilly High School in Chantilly, Virginia. He is a USAMO Gold medalist and MOP participant. Aryan cofounded DMV Math Circle to spread the joy of math to others in his community. Outside of math, he enjoys robotics, going to the gym, and coding (including making this website!).</p>
             <div class="social">
               <a href="https://aryanraj.xyz"><i class="bi bi-globe"></i></a>
               <a href="https://discord.com/users/824104716224036887"><i class="bi bi-discord"></i></a>
@@ -250,269 +262,88 @@
             </div>
           </div>
         </div>
-      </div><!-- End Team Member -->
-
-    </div><!-- End Row -->
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="member">
-          <img src="assets/img/team/amoghakella.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Amogh Akella</h4>
-            <span>Staff, Content Coordinator</span>
-            <p>
-              Amogh Akella is a rising junior at Westwood High School in Austin, Texas. He is a two-time USAJMO qualifier and honorable mention, and a 4-time AIME qualifier. He is also the co-head of problem writing for InteGIRLS. In his free time, he enjoys doing geometry, playing sports such as soccer and cricket, playing chess, coding, and playing the piano. You can find him on discord and AoPS at hgomamogh.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/1146621665921470494"><i class="bi bi-discord"></i></a>
-              <a href="https://aops.com/community/user/hgomamogh" class="custom-icon-link"><img src="https://artofproblemsolving.com/assets/images/logo-ludicrous.gif" alt="AoPS Logo" class="custom-icon" style="width: 24px; height: 24px;"></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="member">
-          <img src="assets/img/team/alexwang.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Alex Wang</h4>
-            <span>Staff</span>
-            <p>
-              Alex will put something here later.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/437287284425883666"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="member">
-          <img src="assets/img/team/lucasqi.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Lucas Qi</h4>
-            <span>Staff, Cofounder</span>
-            <p>
-              Lucas, a cofounder of DMV Math Circle, is an avid enjoyer of mathematics. A three-time AIME qualifier, he loves to learn and help others learn the intricacies of math. He has also participated in AMSP and Ross Mathematics Summer Program. Outside of math, Lucas plays tennis and watches movies.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/598608699031814162"><i class="bi bi-discord"></i></a>
-              <a href="https://instagram.com/lucasqi614"><i class="bi bi-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-    </div><!-- End Row -->
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="member">
-          <img src="assets/img/team/arnaviyengar.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Arnav Iyengar</h4>
-            <span>Staff</span>
-            <p>
-              Arnav Iyengar is a rising sophomore at Jackson-Reed High School in Washington, DC. He is a one time USAJMO and one time USAMO honorable mention. His favorite topics of math are number theory and functional equations. Aside from math, he enjoys playing the piano, playing chess, and running cross country. You can find him on discord at ai7776 and AoPS at megarnie.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/857629254569426954"><i class="bi bi-discord"></i></a>
-              <a href="https://aops.com/community/user/megarnie" class="custom-icon-link"><img src="https://artofproblemsolving.com/assets/images/logo-ludicrous.gif" alt="AoPS Logo" class="custom-icon" style="width: 24px; height: 24px;"></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="member">
-          <img src="assets/img/team/thanhcan.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Thanh Can</h4>
-            <span>Staff</span>
-            <p>
-              Thanh will put something here later.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/693667799201218590"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="member">
-          <img src="assets/img/team/aidenfeyerherm.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Aiden Feyerherm</h4>
-            <span>Staff</span>
-            <p>
-              Aiden Feyerherm is a senior at McLean High School, where he  their math club to competitions. He is a 2-time USAJMO Honorable Mention, and his favorite topic is combinatorics. In addition to math, he enjoys learning physics, with a USAPhO Bronze medal, as well as competitive programming. He loves giving back to the community, and has taught math and science to students of many age groups for various organizations. In his free time, he juggles, listens to "Baby Shark", and plays Geoguessr and Tetris. 
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/604145543064715301"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-    </div><!-- End Row -->
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="member">
-          <img src="assets/img/team/tonyzhang.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Tony Zhang</h4>
-            <span>Staff</span>
-            <p>
-              Tony will put something here later.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/689584310214459411"><i class="bi bi-discord"></i></a>
-              <a href="https://aops.com/community/user/plang2008" class="custom-icon-link"><img src="https://artofproblemsolving.com/assets/images/logo-ludicrous.gif" alt="AoPS Logo" class="custom-icon" style="width: 24px; height: 24px;"></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="member">
-          <img src="assets/img/team/mohanparathasy.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Mohan Parathasy</h4>
-            <span>PR Team</span>
-            <p>
-              Hi everyone! My name’s Mohan, and I’m a current sophomore at TJ. I’ve been really into math since 3rd grade, when I started getting competitive about it, but I’ve never really found my fit within comp math clubs. DMV Math Circle lets me do that, and as part of the PR team, I get to help others do the same. If you have any questions or want to reach out and talk, please send me a note. Thanks!
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/800763975255588874"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="member">
-          <img src="assets/img/team/arnavadepu.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Arnav Adepu</h4>
-            <span>PR Team</span>
-            <p>
-              Arnav Adepu is a rising junior at Bergen County Academies in Hackensack, New Jersey. He is a medalist at the World Math Team Championship and a numerous time AIME qualifier. Aside from math, he enjoys traveling, going to tournaments for various fields, and research. You can find him on discord and aops as tienxion.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/890706505463132190"><i class="bi bi-discord"></i></a>
-              <a href="https://aops.com/community/user/tienxion" class="custom-icon-link"><img src="https://artofproblemsolving.com/assets/images/logo-ludicrous.gif" alt="AoPS Logo" class="custom-icon" style="width: 24px; height: 24px;"></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-    </div><!-- End Row -->
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="member">
-          <img src="assets/img/team/roselynchen.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Roselyn Chen</h4>
-            <span>PR Team</span>
-            <p>
-              Roselyn is a freshman who participates in competition math. She enjoys reading, writing, drawing, and painting.
-            </p>
-            <div class="social">
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="member">
-          <img src="assets/img/team/manilsinghprasad.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Manil Singh-Prasad</h4>
-            <span>PR Team</span>
-            <p>
-              Manil will put something here later.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/1162171019029643305"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="member">
-          <img src="assets/img/team/gabezhang.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Gabe Zhang</h4>
-            <span>PR Team</span>
-            <p>
-              Gabe is a junior at Basis Mclean who moved to the DMV area from China 2 years ago. He is a USAJMO qualifier and loves to travel in his free time, having been to all 7 continents of the world. He is also an aviation enthusiast.
-            </p>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-    </div><!-- End Row -->
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="member">
-          <img src="assets/img/team/luvudeshi.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Luv Udeshi</h4>
-            <span>Staff</span>
-            <p>
-              Luv is a junior at TJ in Virginia. He enjoys competition math and is a four-time AIME qualifier. In 2024, he attended the Ross Mathematics Program. In his free time, Luv enjoys playing basketball and coding.
-            </p>
-            <div class="social">
-              <a href="https://discord.com/users/842862377926131772"><i class="bi bi-discord"></i></a>
-              <a href="https://aops.com/community/user/Taco12" class="custom-icon-link"><img src="https://artofproblemsolving.com/assets/images/logo-ludicrous.gif" alt="AoPS Logo" class="custom-icon" style="width: 24px; height: 24px;"></a>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="member">
-          <img src="assets/img/team/kalanwarusa.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>Kalan Warusa</h4>
-            <span>Staff</span>
-            <p>
-              Kalan Warusa is a sophomore at McLean High School. He likes partcipating in math competitions such as AMC, HMMT, ARML, PUMaC, and CMIMC. He is a three-time AIME qualifier has won many awards such as 1st at GMU Calculus Olympiad. In his free time, he enjoys doing robotics and playing musical instruments.
-            </p>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="member">
-          <img src="assets/img/team/gigachad.png" class="img-fluid" alt="">
-          <div class="member-content">
-            <h4>You?</h4>
-            <span>Apply!</span>
-            <p>
-              Use this <a href="https://forms.gle/UMrdwgwJwdep8tta6">google form</a> to apply for a DMV Math Circle position.
-            </p>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-    </div><!-- End Row -->
-
+      </div><!-- End Founder -->
+    </div>
   </div>
 
-</section><!-- /Team Section -->
+  <!-- Dynamic 3-column grid (Staff → PR → Apply) -->
+  <div class="container">
+    <div class="row" id="team-grid" data-aos="fade-up"></div>
+  </div>
+</section>
+
+<!-- Ensure team.js is loaded BEFORE this script -->
+<script src="team.js"></script>
+<script>
+  // Icon mapping for socials
+  const ICONS = {
+    discord: { html: '<i class="bi bi-discord"></i>', title: 'Discord' },
+    instagram: { html: '<i class="bi bi-instagram"></i>', title: 'Instagram' },
+    linkedin: { html: '<i class="bi bi-linkedin"></i>', title: 'LinkedIn' },
+    website: { html: '<i class="bi bi-globe"></i>', title: 'Website' },
+    aops: { html: '<img class="custom-icon" src="https://artofproblemsolving.com/assets/images/logo-ludicrous.gif" alt="AoPS">', title: 'AoPS' }
+  };
+
+  // Role label from JSON group
+  const ROLE_TEXT = { staff: 'Staff', pr: 'PR Team', apply: 'Apply!' };
+
+  // Group sort priority (role order)
+  const GROUP_RANK = { staff: 1, pr: 2, apply: 3 };
+
+  function createMemberCard(member, index) {
+    const roleLine = ROLE_TEXT[member.group] || '';
+
+    // Build socials
+    const socials = member.socials || {};
+    const socialsHtml = Object.keys(socials).map(key => {
+      const icon = ICONS[key];
+      if (!icon) return '';
+      return `<a href="${socials[key]}" target="_blank" rel="noopener" title="${icon.title}">${icon.html}</a>`;
+    }).join('');
+
+    // Card (apply card uses same layout and shows its role line too)
+    return `
+      <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="${100 + (index % 3) * 100}">
+        <div class="member">
+          <img src="${member.img}" class="img-fluid" alt="">
+          <div class="member-content">
+            <h4>${member.name}</h4>
+            ${roleLine ? `<span>${roleLine}</span>` : ''}
+            <p>${member.bio || ''}</p>
+            <div class="social">${socialsHtml}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTeamFromGlobal() {
+    if (!window.team || !Array.isArray(window.team.members)) {
+      console.error('team.js not loaded or invalid format. Expecting global const team = { members: [...] }');
+      return;
+    }
+
+    // Shallow copy
+    const members = window.team.members.slice();
+
+    // Sort by group rank first, then alphabetically by name
+    members.sort((a, b) => {
+      const ra = GROUP_RANK[a.group] ?? 99;
+      const rb = GROUP_RANK[b.group] ?? 99;
+      if (ra !== rb) return ra - rb;
+      return (a.name || '').localeCompare(b.name || '', undefined, { sensitivity: 'base' });
+    });
+
+    // Render into one flowing 3-column grid; PR appears after Staff; Apply last
+    const grid = document.getElementById('team-grid');
+    grid.innerHTML = members.map((m, i) => createMemberCard(m, i)).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', renderTeamFromGlobal);
+</script>
+
+
+
 
 
     <!-- Faq Section -->
