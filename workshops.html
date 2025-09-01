@@ -1,109 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Workshops - DMV Math Circle</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="description" content="Explore recent DMV Math Circle workshops with videos and materials from USA(J)MO qualifiers and MOP participants." />
+  <meta name="keywords" content="DMV Math Circle, workshops, olympiad math, geometry, number theory" />
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    /* Page-specific refinements */
+    .workshops-controls {
+      gap: .75rem;
+    }
+    .workshop-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 20px;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .workshop-card:focus-within,
+    .workshop-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    }
+    .workshop-title {
+      font-size: 1.25rem;
+      margin: 0 0 .25rem;
+      line-height: 1.25;
+    }
+    .workshop-meta {
+      color: #6b7280;
+      font-size: .95rem;
+      margin-bottom: .75rem;
+    }
+    .embed-aspect {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f3f4f6;
+      margin: .5rem 0 .75rem;
+    }
+    .embed-aspect iframe, .embed-aspect embed {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .card-actions {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      min-height: 40px;
+    }
+    .btn-soft {
+      --c:#0d6efd;
+      background: rgba(13,110,253,.08);
+      color: var(--c);
+      border: 1px solid rgba(13,110,253,.15);
+      padding: .5rem .75rem;
+      border-radius: .65rem;
+      font-weight: 500;
+    }
+    .btn-soft:hover, .btn-soft:focus {
+      background: rgba(13,110,253,.12);
+      color: var(--c);
+      border-color: rgba(13,110,253,.25);
+      text-decoration: none;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+    }
+  </style>
 </head>
 
 <body class="starter-page-page">
-  <script src="workshops.js"></script>
+  <!-- Load data first; mark as defer so DOM is parsed -->
+  <script src="workshops.js" defer></script>
+
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename">DMV Math Circle</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" aria-label="Primary">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="workshops.html">Workshops</a></li>
+              <li><a href="workshops.html" class="active" aria-current="page">Workshops</a></li>
               <li><a href="competitions.html">Competitions</a></li>
               <li><a href="potw.html">POTW</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle navigation"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
       <div class="container position-relative">
         <h1>Workshops</h1>
-        <p>DMV Math Circle offers free workshops led by USA(J)MO qualifiers and MOP participants. These sessions are designed to help you explore and master advanced math topics, guided by some of the brightest young minds in the field.</p>
-        <nav class="breadcrumbs">
+        <p>DMV Math Circle offers free workshops led by USA(J)MO qualifiers and MOP participants. Explore recent sessions with videos and materials.</p>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li class="current">Workshops</li>
+            <li class="current" aria-current="page">Workshops</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Workshops Section -->
-    <section id="workshops-section" class="workshops-section section">
+    <section id="workshops-section" class="workshops-section section" aria-labelledby="workshops-heading">
       <div class="container section-title" data-aos="fade-up">
-        <span>Workshops<br></span>
-        <h2>Workshops</h2>
-        <p>Explore our recent workshops with detailed videos and materials.</p>
+        <span>Workshops<br /></span>
+        <h2 id="workshops-heading">Workshops</h2>
+        <p class="mb-0">Explore our recent workshops with detailed videos and materials.</p>
       </div>
 
       <div class="container" data-aos="fade-up">
-        <div id="workshops-container" class="row gy-4">
-          <!-- Workshops will be dynamically inserted here -->
+        <div class="d-flex flex-wrap workshops-controls mb-3" role="region" aria-label="Workshop controls">
+          <div class="ms-auto d-flex gap-2 align-items-center">
+            <label for="sortSelect" class="me-1 mb-0">Sort:</label>
+            <select id="sortSelect" class="form-select form-select-sm" style="width:auto">
+              <option value="desc" selected>Newest first</option>
+              <option value="asc">Oldest first</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="workshops-container" class="row row-cols-1 row-cols-lg-2 g-4 align-items-stretch" role="list">
+          <!-- Cards injected here -->
+        </div>
+
+        <div id="empty-state" class="empty-state d-none">
+          <i class="bi bi-collection-play" style="font-size:2rem;"></i>
+          <p class="mt-2">No workshops available yet. Please check back soon!</p>
         </div>
       </div>
-    </section><!-- End Workshops Section -->
-
+    </section>
   </main>
 
   <footer id="footer" class="footer dark-background">
-
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">DMV Math Circle</span>
           </a>
-          <p>DMV Math Circle is dedicated to fostering a love for mathematics and providing students with the resources and support they need to excel. Join us and become part of a vibrant community of math enthusiasts.</p>
+          <p>DMV Math Circle is dedicated to fostering a love for mathematics and providing students with the resources and support they need to excel.</p>
           <div class="social-links d-flex mt-4">
-            <a href="https://discord.gg/sJ6gj9pQUR"><i class="bi bi-discord"></i></a>
-            <a href="https://youtube.com/@dmvmath"><i class="bi bi-youtube"></i></a>
-            <a href="https://instagram.com/dmvmathcircle"><i class="bi bi-instagram"></i></a>
+            <a href="https://discord.gg/sJ6gj9pQUR" aria-label="Join our Discord"><i class="bi bi-discord"></i></a>
+            <a href="https://youtube.com/@dmvmath" aria-label="Visit our YouTube channel"><i class="bi bi-youtube"></i></a>
+            <a href="https://instagram.com/dmvmathcircle" aria-label="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
@@ -131,97 +215,226 @@
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p><strong>Email:</strong> dmvmathcircle@gmail.com<br></p>
+          <p><strong>Email:</strong> dmvmathcircle@gmail.com</p>
         </div>
-
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename"><a href="https://aryanraj.xyz">Aryan Raj</a></strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename"><a href="https://aryanraj.xyz" rel="noopener" target="_blank">Aryan Raj</a></strong> <span>All Rights Reserved</span></p>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader" aria-hidden="true"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
-  <!-- Script to dynamically insert workshops -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const workshopsContainer = document.getElementById("workshops-container");
-      workshops.forEach(workshop => {
-        const workshopElement = document.createElement("div");
-        workshopElement.className = "col-lg-6 d-flex align-items-stretch";
+  <!-- Workshops rendering (deferred) -->
+  <script defer>
+    (function () {
+      const container = document.getElementById("workshops-container");
+      const emptyState = document.getElementById("empty-state");
+      const sortSelect = document.getElementById("sortSelect");
 
-        workshopElement.innerHTML = `
-          <div class="workshop-card">
-            <h3>${workshop.title}</h3>
-            <p>Date: ${workshop.date}</p>
-            <div class="embed-container">
-              ${workshop.youtubeLink}
-            </div>
-            <iframe src="${workshop.pdfLink}/preview" style="width:100%; height:100%; margin:auto;" frameborder="0"></iframe>
-          </div>
-        `;
-        workshopsContainer.appendChild(workshopElement);
+      // Utility: format ISO date to readable (e.g., Aug 31, 2025)
+      function formatDate(iso) {
+        if (!iso) return "";
+        const d = new Date(iso);
+        if (Number.isNaN(d.getTime())) return iso;
+        return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+      }
+
+      function buildDrivePreviewUrl(link) {
+        // Accepts a link like https://drive.google.com/file/d/<id>
+        // Returns a safe preview URL or null
+        if (!link) return null;
+        try {
+          const u = new URL(link);
+          // Normalize /preview suffix while preserving ID
+          if (u.hostname.includes("drive.google.com")) {
+            // If it already ends with /preview, keep it; otherwise add it
+            return u.pathname.endsWith("/preview") ? u.href : (u.origin + u.pathname.replace(/\/view.*$/,"") + "/preview");
+          }
+          // Fallback: use as-is
+          return link;
+        } catch {
+          return link;
+        }
+      }
+
+      function createWorkshopCard(w) {
+        const col = document.createElement("div");
+        col.className = "col";
+        col.setAttribute("role", "listitem");
+
+        const card = document.createElement("article");
+        card.className = "workshop-card h-100";
+        card.tabIndex = 0;
+
+        // Title
+        const h3 = document.createElement("h3");
+        h3.className = "workshop-title";
+        h3.textContent = w.title || "Untitled Workshop";
+        card.appendChild(h3);
+
+        // Meta
+        const meta = document.createElement("div");
+        meta.className = "workshop-meta";
+        meta.textContent = w.date ? `Date: ${formatDate(w.date)}` : "Date: TBA";
+        card.appendChild(meta);
+
+        // YouTube (lazy mount via data attribute)
+        if (w.youtubeLink) {
+          const ytWrap = document.createElement("div");
+          ytWrap.className = "embed-aspect js-lazy-embed";
+          ytWrap.dataset.embedType = "html";        // indicates raw HTML (your stored iframe)
+          ytWrap.dataset.html = w.youtubeLink;      // store the HTML string to inject on intersect
+          ytWrap.setAttribute("aria-label", "Workshop video");
+          card.appendChild(ytWrap);
+        }
+
+        // PDF (Drive preview or open button)
+        if (w.pdfLink) {
+          const pdfWrap = document.createElement("div");
+          pdfWrap.className = "embed-aspect js-lazy-embed";
+          pdfWrap.dataset.embedType = "drive";
+          pdfWrap.dataset.src = buildDrivePreviewUrl(w.pdfLink);
+          pdfWrap.setAttribute("aria-label", "Workshop materials");
+          card.appendChild(pdfWrap);
+        }
+
+        // Actions
+        const actions = document.createElement("div");
+        actions.className = "card-actions";
+
+        if (w.youtubeLink) {
+          const openYt = document.createElement("a");
+          openYt.className = "btn-soft";
+          openYt.href = (function () {
+            // Try to extract src from the stored iframe string to open in a new tab
+            const m = String(w.youtubeLink).match(/src="([^"]+)"/i);
+            return m ? m[1] : "#";
+          })();
+          openYt.target = "_blank";
+          openYt.rel = "noopener";
+          openYt.textContent = "Open video";
+          actions.appendChild(openYt);
+        }
+
+        if (w.pdfLink) {
+          const openPdf = document.createElement("a");
+          openPdf.className = "btn-soft";
+          openPdf.href = w.pdfLink;
+          openPdf.target = "_blank";
+          openPdf.rel = "noopener";
+          openPdf.textContent = "Open PDF";
+          actions.appendChild(openPdf);
+        }
+
+        if (!w.youtubeLink && !w.pdfLink) {
+          const note = document.createElement("span");
+          note.className = "text-muted";
+          note.textContent = "Materials coming soon.";
+          actions.appendChild(note);
+        }
+
+        card.appendChild(actions);
+        col.appendChild(card);
+        return col;
+      }
+
+      function render(sortOrder = "desc") {
+        container.innerHTML = "";
+        if (!Array.isArray(window.workshops) || !window.workshops.length) {
+          emptyState.classList.remove("d-none");
+          return;
+        }
+        emptyState.classList.add("d-none");
+
+        const sorted = [...window.workshops].sort((a, b) => {
+          const da = new Date(a.date || 0).getTime();
+          const db = new Date(b.date || 0).getTime();
+          return sortOrder === "asc" ? da - db : db - da;
+        });
+
+        for (const w of sorted) {
+          container.appendChild(createWorkshopCard(w));
+        }
+
+        // Lazy-load embeds only when visible
+        setupLazyEmbeds();
+      }
+
+      function setupLazyEmbeds() {
+        const targets = container.querySelectorAll(".js-lazy-embed");
+        if (!targets.length) return;
+
+        const mount = (el) => {
+          const type = el.dataset.embedType;
+          if (type === "html" && el.dataset.html) {
+            // Insert stored iframe HTML (trusted source: your own data file)
+            el.innerHTML = el.dataset.html;
+            // Ensure iframe attributes are accessible
+            const ifr = el.querySelector("iframe");
+            if (ifr && !ifr.title) ifr.title = "Embedded video";
+            if (ifr) {
+              ifr.loading = "lazy";
+              ifr.referrerPolicy = ifr.referrerPolicy || "strict-origin-when-cross-origin";
+              // keep allow + allowfullscreen from your data
+            }
+          } else if (type === "drive" && el.dataset.src) {
+            const ifr = document.createElement("iframe");
+            ifr.src = el.dataset.src;
+            ifr.loading = "lazy";
+            ifr.title = "Embedded PDF preview";
+            ifr.referrerPolicy = "strict-origin-when-cross-origin";
+            ifr.allow = "autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen";
+            el.appendChild(ifr);
+          }
+          // Prevent remount
+          el.classList.remove("js-lazy-embed");
+          delete el.dataset.embedType;
+          delete el.dataset.html;
+          delete el.dataset.src;
+        };
+
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                mount(entry.target);
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { rootMargin: "200px 0px" });
+          targets.forEach(t => io.observe(t));
+        } else {
+          // Fallback: mount all immediately
+          targets.forEach(mount);
+        }
+      }
+
+      // Sort control
+      sortSelect.addEventListener("change", (e) => {
+        render(e.target.value);
       });
-    });
+
+      // Initial render
+      document.addEventListener("DOMContentLoaded", () => render(sortSelect.value));
+    })();
   </script>
-
-<style>
-  .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #f9f9f9;
-    margin-bottom: 20px;
-  }
-  .embed-container iframe,
-  .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .workshop-card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 1000px; /* Adjust this value to make the card taller */
-  }
-  .workshop-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
-  .workshop-card p {
-    margin-bottom: 15px;
-    color: #666;
-  }
-</style>
-
 </body>
-
 </html>
