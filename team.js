@@ -94,7 +94,16 @@ window.team = {
         "instagram": "https://www.instagram.com/kchromatic3/"
       }
     },
-
+    {
+      "name": "Riyan Nayak",
+      "group": "staff",
+      "img": "assets/img/team/riyannayak.png",
+      "bio": "Riyan is a sophomore at Deep Run High School in Glen Allen, Virginia. He likes partaking in numerous college math competitions, with his favorite subject being combinatorics. He does competitive programming, cybersecurity/capture the flag, physics, and science bowl. He also loves playing tennis in his free time and playing the violin.",
+      "socials": {
+        "discord": "https://discord.com/users/1303686726237163562",
+        "instagram": "https://instagram.com/riyan57794"
+      }
+    },
     /* PR team */
     {
       "name": "Mohan Parathasy",
